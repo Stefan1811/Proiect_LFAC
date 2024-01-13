@@ -1,0 +1,56 @@
+integer x = 23;
+integer x1;
+integer x1;
+
+integer x2;
+float f1 = 50.0;
+string s = "ana";
+
+function integer testFunction(integer x, float z) {
+    x = x + 2;
+    return x * x;
+}
+
+function integer testFunction(integer x, float z) {
+    x = x - 2;
+    return x + x;
+}
+
+function integer testFunction(float x, float z) {
+    return 2;
+}
+
+function integer test(integer param) {
+    return param;
+}
+
+function integer return1()
+{
+    return 1;
+}
+
+begin_progr
+    x3 = x + 2;
+	f1 = x + x2; 
+	f1 = test(5) + x;
+    x = test(5) + f1;
+	x = s + f1;
+    test(f1); 
+	test(5,f1);
+	TypeOf(f1+x);
+    Eval(f1);
+    Eval(f1+x);
+	test(5+f1);
+
+
+
+    array integer[130] xq;
+    array integer[3] myIniArray = {1,2,3,4,5};
+    array integer[20] a02 = {2.9, 2, 1, 293}; 
+    integer result = test(x, x2, x3);
+    result = testFunction(nedefArray[0]);
+    integer cevaaa = nedefFunc(x);
+    integer a = 2 + test();
+    a = test(f1);
+
+end_progr

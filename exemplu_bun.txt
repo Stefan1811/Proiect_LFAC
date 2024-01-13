@@ -1,0 +1,110 @@
+integer x ;
+integer x1;
+integer x2;
+integer y;
+array integer[10] arr;
+boolean myBool = false;
+array float[15] v1, v2 ,myRealArray = {1.1, 0.2, 9.9};
+float f = 20.0 ;
+float f1;
+string  titlu = "proiectLFAC";
+char Litera = 'G';
+
+function integer testFunction(integer x123, float z) {
+    x123 = x123 + 2;
+    return x123 * x123;
+}
+
+function integer testFunction(integer x, integer z) {
+    return z - x;
+}
+
+function integer test(integer param1, integer param2, float f) {
+    if(param1 > param2)
+    {
+        param1 = param2 + 1;
+    }
+    return param1;
+}
+
+function integer return1()
+{
+    return 1;
+}
+class C1 {
+    integer x, q;
+    float avg;
+    function void do(integer x, integer qs){
+        qs = qs + x;
+    }
+}
+
+class C2 {
+    string nume = "Bodescu";
+    string prenume = "Stefan";
+}
+
+class C3 {
+    function integer method(integer x, integer y) {
+        return 2;
+    }
+    function string method2(float a) {
+        return 3;
+    }
+}
+
+begin_progr
+
+    x = 7;
+    x1 = x1 * 2;
+    f = 30.0 ; 
+    v1[0] = 1.9;
+    myBool = true;
+    titlu = "Proiect Lfac";
+    Litera = 'q';
+
+    if(x > 0)
+    {
+        integer xq = 0;
+        for(integer i = 0; i < 10; i = i + 1)
+        {
+            xq = xq * (xq + 1) + 1;
+        }
+
+        while(xq != 0)
+        {
+            v1[0] = v1[0] * 0.99;
+            xq = xq / 2;
+        }
+    }
+
+    x = 10; x1 = 20; x2 = 30; y = 100;
+
+    if (x1 + test(x1,x2,f) < 5 + x1 && ((x > 2 || x1 < 4+x2) || x == 2)) {
+	   x = 2;
+       Eval(x1 * x2 / x1);
+    }
+
+    &C1 obj1;
+    &C1 obj2;
+
+    obj1.x = x2;
+    obj2.x = y;
+    
+    Eval(obj1.x + obj2.x);
+
+    &C3 obj3;
+
+    array integer[20] xArr = {9,8,2,3,4};
+    Eval(xArr[1]); 
+
+    x = test(test(x1,3,f)+2, y+4 , f) + (30 - y * arr[2]) - 10;
+    x1 = x*100 + 5 * 100 + arr[2];
+    Eval(x * 10 - 100);
+    Eval(x1);
+    Eval(x2 * 10 - 200) ;
+    Eval(x+test(x1, x,f)) ; 	
+    TypeOf(x+23);
+    TypeOf(f - 30.0);
+
+end_progr
